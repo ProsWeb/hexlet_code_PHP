@@ -1,2 +1,4 @@
-# hexlet_code_PHP
-My solutions for Hexlet exercises in PHP
+# hexlet_code
+My solutions for Hexlet exercises in JS:
+1. open some .php file;
+2. see magic solution.
