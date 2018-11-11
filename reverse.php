@@ -4,6 +4,8 @@
 
 reverse('hello, world!'); // !dlrow ,olleh -->
 
+<?php
+
 function reverse($str)
 {
     $result = '';

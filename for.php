@@ -8,6 +8,8 @@
 8 * 8 + 10 * 10 + 12 * 12 + 14 * 14 == sumDouble(8, 14);
 3 * 3 + 5 * 5 == sumDouble(3, 6); -->
 
+<?php
+
 function sumDouble($begin, $end)
 {
     if ($begin === $end) {

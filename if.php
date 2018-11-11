@@ -14,13 +14,13 @@ a:b - реальный счет, c:d - предполагаемый.
 1 == result(1, 3, 1, 2); // 1:3 - реальный счет, 1:2 - предполагаемый
 0 == result(4, 3, 0, 0); // 4:3 - реальный счет, 0:0 - предполагаемый -->
 
+<?php
+
 function result($a, $b, $c, $d)
 {
-    // BEGIN (write your solution here)
     if ($a === $c && $b === $d) {
         return 2;
     } elseif ($a > $b && $c > $d || $a < $b && $c < $d || $a === $b && $c === $d) {
         return 1;
     } return 0;
-    // END
 }

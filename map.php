@@ -2,11 +2,12 @@
 
 Пример:
 
-<?php
 
 wordsCount(''); // []
 wordsCount('  one two one'); // ['one' => 2, 'two' => 1]
 wordsCount('  one      two       one     '); // ['one' => 2, 'two' => 1] -->
+
+<?php
 
 function wordsCount($str)
 {

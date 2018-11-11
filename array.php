@@ -2,13 +2,13 @@
 
 Пример:
 
-<?php
 
 uniq([]); // []
 uniq([3, 4, 3]); // [3, 4]
 uniq([12, 1, 1, 3, 5, 10, 3, 10]); // [12, 1, 3, 5, 10] -->
 
-// BEGIN (write your solution here)
+<?php
+
 // function uniq($array)
 // {
 //     if (empty($array)) {
