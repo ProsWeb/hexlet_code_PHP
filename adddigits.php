@@ -32,4 +32,24 @@ function addDigits($num)
 {
     return ($num - 1) % 9 + 1;
 }
+
+
+function addDigits($num)
+{
+    $numString = (string)$num;
+    $numStringLen = strlen($numString);
+
+    function iter($numStringLen, $sum, $acc, $numString)
+    {
+        if ($numStringLen === 0 && $sum <= 9) {
+            return $sum;
+        } elseif ($numStringLen === 0 && $sum > 9) {
+            $sumString = (string)$sum;
+            return $sumString[0] + $sumString[1];
+        } else {
+            return iter($numStringLen - 1, $sum + $numString[$acc], $acc + 1, $numString);
+        }
+    }
+    return iter($numStringLen, $sum = 0, $acc = 0, $numString);
+}
 */

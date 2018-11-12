@@ -32,3 +32,14 @@ function getSameParity($array)
     }
     return ($array[0]% 2 === 0) ? $evenArray : $notEvenArray;
 }
+
+// function getSameParity($array)
+// {
+//     $filtered = array_filter($array, function ($element) use ($array) {
+//         if ($array[0] % 2 === 0) {
+//             return $element % 2 === 0;
+//         }
+//         return $element % 2 !== 0;
+//     });
+//     return array_values($filtered);
+// }

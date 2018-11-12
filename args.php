@@ -8,7 +8,6 @@ null == multiArgs();
 
 <?php
 
-namespace App\Solution;
 
 // BEGIN (write your solution here)
 // function multiArgs(...$numbers)
