@@ -22,3 +22,15 @@ function fib($num)
         return fib($num - 1) + fib($num - 2);
     }
 }
+
+function fib2($num)
+{
+    $iter = function ($num) use (&$iter) {
+        if ($num < 2) {
+            return $num;
+        } else {
+            return $iter($num - 1) + $iter($num - 2);
+        }
+    };
+    return $iter($num);
+}
