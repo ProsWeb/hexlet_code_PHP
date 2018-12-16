@@ -21,5 +21,11 @@ class SquaresGenerator
     {
         $filled = array_fill(0, $amount, new Square($side));
         return $filled;
+
+        // $result = [];
+        // for ($i = 0; $i < $number; $i++) {
+        //     $result[] = new Square($side);
+        // }
+        // return $result;
     }
 }
