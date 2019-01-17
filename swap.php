@@ -52,6 +52,7 @@ function swap($array, $index)
         $temp = $array[$index - 1];
         $array[$index - 1] = $array[$index + 1];
         $array[$index + 1] = $temp;
+        //[$array[$index - 1], $array[$index + 1]] = [$array[$index + 1], $array[$index - 1]]; //destructuring
     }
     return $array;
 }
