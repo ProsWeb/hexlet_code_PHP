@@ -38,21 +38,23 @@ function make()
 function set(&$map, $key, $value)
 {
     $hashedKey = crc32($key) % 1000;
-    if (array_key_exists($hashedKey, $map)) {
-        return false;
-    } else {
-        $map[$hashedKey] = $value;
-        return true;
+    if (isset($map[$hashedKey])) {
+        [$currentKey] = $map[$hashedKey];
+        if ($currentKey != $key) {
+            return false;
+        }
     }
+    $map[$hashedKey] = [$key, $value];
+    return true;
 }
 
 function get($map, $key, $default = null)
 {
     $hashedKey = crc32($key) % 1000;
-    if (array_key_exists($hashedKey, $map)) {
-        return $map[$hashedKey];
-    } else {
+    if (!isset($map[$hashedKey])) {
         return $default;
     }
+    [, $value] = $map[$hashedKey];
+    return $value;
 }
 // END
